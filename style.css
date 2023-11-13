@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    block-size: border-box;
+}
+/* .navbar{
+    display: flex;
+    justify-content: space-between;
+} */
+label input{
+    appearance: none;
+}
+label{
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+label .logo_menu{
+    background: rgb(134, 131, 131);
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+}
+label .logo_menu::before{
+    content: "\f805" ;
+    font-family: "font awesome 6 Free";
+    font-weight: 600;
+    font-size: 1.2em;
+    position: absolute;
+    top: 0.5;
+    left: 0.5;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label input:checked ~ .logo_menu::before{
+    content: "\f00d";
+}
+.test{
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    background: yellow;
+    transition: 1s;
+}
+label input:checked ~ .test{
+    display: block;
+    height: 200px;
+    width: 50px;
+    
+}
+.test li{
+    padding: 10px;
+    list-style: none;
+}
+.test a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: rgb(255, 0, 0);
+}
